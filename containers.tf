@@ -17,8 +17,8 @@ resource "docker_container" "nginx" {
   }
 
   volumes {
-    container_path = "/etc/nginx/"
-    host_path      = docker_volume.web_server_volume.mountpoint
+    container_path = "/etc/nginx"
+    host_path      = "${docker_volume.web_server_volume.mountpoint}/nginx"
     read_only      = false
   }
 }
