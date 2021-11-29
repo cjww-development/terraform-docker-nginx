@@ -30,3 +30,6 @@ override.tf.json
 
 # Editors
 .idea
+
+.terraform.lock.hcl
+tfplan
