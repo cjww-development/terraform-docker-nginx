@@ -28,13 +28,13 @@ variable "restart_policy" {
   description = "The restart policy for the container. Must be one of 'no', 'on-failure', 'always', 'unless-stopped'. Defaults to no."
   validation {
     condition = contains(
-    [
-      "no",
-      "on-failure",
-      "always",
-      "unless-stopped"
-    ],
-    var.restart_policy
+      [
+        "no",
+        "on-failure",
+        "always",
+        "unless-stopped"
+      ],
+      var.restart_policy
     )
     error_message = "The provided value did not match a valid value."
   }
